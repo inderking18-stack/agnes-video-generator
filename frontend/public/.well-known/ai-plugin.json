@@ -1,0 +1,16 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Pavo Producer",
+  "name_for_model": "pavo_producer",
+  "description_for_human": "Auto-produces multi-scene videos using your self-hosted Agnes engine.",
+  "description_for_model": "Use when user asks to make a story video. Break story into 5-10 sec scenes and call generateVideo for each scene with same character.",
+  "auth": { "type": "none" },
+  "api": {
+    "type": "openapi",
+    "url": "https://inderking18-stack.github.io/agnes-video-generator/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://video.5chatkey.top/logo.png",
+  "contact_email": "support@5chatkey.top",
+  "legal_info_url": "https://github.com/inderking18-stack/agnes-video-generator"
+}
