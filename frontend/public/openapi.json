@@ -1,0 +1,30 @@
+{
+  "openapi": "3.0.1",
+  "info": { "title": "Agnes Video Generator", "version": "1.0" },
+  "servers": [{ "url": "https://video.5chatkey.top" }],
+  "paths": {
+    "/api/video/generate": {
+      "post": {
+        "operationId": "generateVideo",
+        "summary": "Generate one scene video",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "prompt": { "type": "string", "description": "Detailed scene prompt with Pixar style and character consistency" },
+                  "duration": { "type": "integer", "default": 5 },
+                  "aspectRatio": { "type": "string", "default": "9:16" }
+                },
+                "required": ["prompt"]
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Video job started" } }
+      }
+    }
+  }
+}
